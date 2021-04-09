@@ -2,7 +2,7 @@
 
     <div class="main-content">
         <div class="wrapper">
-            <h1>Diagnosa</h1>
+            <h1>Halaman Diagnosa</h1>
             <br>
             
             <?php 
@@ -15,7 +15,77 @@
             <br>
 
             <form action="" method="POST">
+
+                <div class="data-diri">
+                
+                    <h5><b>Data Diri</b></h5>
+                    <p><b>Mohon isi data diri yang tertera di bawah ini.</b></p>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            Nama Lengkap:
+                        </label>
+                        
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="nama">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            Jenis Kelamin:
+                        </label>
+                        
+                        <div class="col-sm-10">
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-Laki">
+                            <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan">
+                            <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                        </div>
+                    
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            Alamat:
+                        </label>
+                        
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" name="alamat" cols="45" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">
+                            Pekerjaan:
+                        </label>
+                        
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="pekerjaan">
+                        </div>
+                    </div>
+
+                    <br>
+
+                </div>
             
+                <br>
+
+                <h5>Pilih gejala-gejala yang Anda rasakan di bawah ini!</h5>
+                <br>
+
                 <?php
 
                 $sql = "SELECT * FROM tbl_gejala";
@@ -51,6 +121,13 @@
                     //echo "button clicked";
                     $nm_gejala = $_POST['nm_gejala'];
                     $jumlah_gejala = count($nm_gejala);
+
+                    $nama = $_POST['nama'];
+                    $jenis_kelamin = $_POST['jenis_kelamin'];
+                    $alamat = $_POST['alamat'];
+                    $pekerjaan = $_POST['pekerjaan'];
+
+                    $tanggal = date("Y-m-d h:i:sa"); // Order date
 
                     // Masih error, nanti diperbaiki
                     if($jumlah_gejala==0){
@@ -96,7 +173,25 @@
 
                             $id = $row2['kd_penyakit'];
 
-                            header("location:".SITEURL."hasil-diagnosa.php?id=".$id);
+                            $sql4 = "INSERT INTO tbl_pasien SET
+                                nama = '$nama',
+                                jenis_kelamin = '$jenis_kelamin',
+                                alamat = '$alamat',
+                                pekerjaan = '$pekerjaan',
+                                kd_penyakit = '$id',
+                                tanggal = '$tanggal'
+                            ";
+
+                            $res3 = mysqli_query($conn, $sql4);
+
+                            if($res2==TRUE){
+                                header("location:".SITEURL."hasil-diagnosa.php?id=".$id);
+                            }
+                            else{
+                                header('location:'.SITEURL);
+                            }
+
+                            //header("location:".SITEURL."hasil-diagnosa.php?id=".$id);
                             //if($count == 0 OR $x != $nm_gejala){
                                 //Redirect Page to Manage Gejala
                                 

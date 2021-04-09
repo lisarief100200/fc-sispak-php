@@ -2,11 +2,7 @@
 
     <div class="main-content">
         <div class="wrapper">
-            <h1>Halaman Hasil Diagnosa</h1>
-            <br>
-
-            
-
+            <h1>Halaman Hasil</h1>
             <br>
 
             <?php
@@ -42,14 +38,14 @@
 
             ?>
 
-            <table class='tbl-full'>
+            <table class="table table-bordered table-dark">
                 <tr>
-                    <td><b>Hasil Diagnosa Penyakit</b></td>
+                    <td colspan="2"><b>Hasil Diagnosa Penyakit</b></td>
                 </tr>
 
                 <tr>
                     <td>Penyakit</td>
-                    <td><?php echo $nm_penyakit; ?></td>
+                    <td class="error"><?php echo $nm_penyakit; ?></td>
                 </tr>
 
                 <tr>

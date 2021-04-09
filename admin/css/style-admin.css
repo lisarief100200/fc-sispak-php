@@ -131,3 +131,14 @@ table tr td{
     margin-right: auto;
     width: 50%;
 }
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.dashboard{
+    background-color: whitesmoke;
+    margin: 1%;
+    padding: 2%;
+}

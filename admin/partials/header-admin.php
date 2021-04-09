@@ -35,7 +35,7 @@
                 <a class="nav-link" href="manage-gejala.php">Gejala</a>
                 <a class="nav-link" href="manage-penyakit.php">Penyakit & Solusi</a>
                 <a class="nav-link" href="manage-relasi.php">Relasi FC</a>
-                <a class="nav-link" href="#">Pasien</a>
+                <a class="nav-link" href="pasien.php">Pasien</a>
                 <a class="nav-link" href="logout.php">Logout</a>
             </div>
             </div>
