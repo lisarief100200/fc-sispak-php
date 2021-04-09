@@ -44,7 +44,7 @@
             </div>
             <br>
             <div class="form-group row">
-                <input id="btn" type="submit" name="submit" value="Tambah Gejala" class="btn-primary col-sm-3">
+                <input id="btn" type="submit" name="submit" value="Tambah Gejala" class="btn-primary col-sm-3" style="float: right;">
             </div>
         </form>
     </div>

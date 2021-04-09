@@ -46,7 +46,16 @@
                                     <td class="align-middle"><?php echo $jenis_kelamin; ?></td>
                                     <td class="align-middle"><?php echo $alamat; ?></td>
                                     <td class="align-middle"><?php echo $pekerjaan; ?></td>
-                                    <td class="align-middle"><?php echo $kd_penyakit; ?></td>
+                                    <td class="align-middle"><?php
+                                    
+                                        if($kd_penyakit==""){
+                                            echo "Tidak Terdeteksi";
+                                        }
+                                        else{
+                                            echo $kd_penyakit;
+                                        }
+
+                                    ?></td>
                                     <td class="align-middle"><?php echo $tanggal; ?></td>
                                 </tr>
     

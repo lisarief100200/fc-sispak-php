@@ -12,8 +12,6 @@
                 }
             ?>
 
-            <br>
-
             <form action="" method="POST">
 
                 <div class="data-diri">
@@ -27,7 +25,7 @@
                         </label>
                         
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nama">
+                            <input type="text" class="form-control" name="nama" required>
                         </div>
                     </div>
 
@@ -41,12 +39,12 @@
                         <div class="col-sm-10">
                         
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-Laki">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="Laki-Laki" required>
                             <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
                         </div>
                         
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="Perempuan" required>
                             <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                         </div>
                     
@@ -61,7 +59,7 @@
                         </label>
                         
                         <div class="col-sm-10">
-                            <textarea type="text" class="form-control" name="alamat" cols="45" rows="5"></textarea>
+                            <textarea type="text" class="form-control" name="alamat" cols="45" rows="5" required></textarea>
                         </div>
                     </div>
 
@@ -73,7 +71,7 @@
                         </label>
                         
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="pekerjaan">
+                            <input type="text" class="form-control" name="pekerjaan" required>
                         </div>
                     </div>
 
@@ -96,7 +94,7 @@
                 if($count>0){
                     // Diagnosa ada
                     while($row=mysqli_fetch_assoc($res)){
-                        echo "<input type='checkbox' value='".$row['nm_gejala']."' name='nm_gejala[]' /> ".$row['nm_gejala']."<br>";
+                        echo "<input required type='checkbox' value='".$row['nm_gejala']."' name='nm_gejala[]' /> ".$row['nm_gejala']."<br>";
                     ?>
                     <br>
 
@@ -112,7 +110,7 @@
 
                 ?>
                 
-                <input id="btn" type="submit" name="submit" value="Cek Diagnosa" class="btn-primary col-sm-3">
+                <input id="btn" type="submit" name="submit" value="Cek Diagnosa" class="btn-primary col-sm-3" style="float: right; font-size: 20px;">
             </form>
 
             <?php
