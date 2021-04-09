@@ -19,7 +19,7 @@
     <!-- Footer Section Starts Here -->
     <section class="footer">
         <div class="container text-center">
-            <p>All rights reserved. Made with ❤️ by Lisa Arief</a></p>
+            <p>All rights reserved. Made with ❤️ by Lisa Arief</p>
         </div>
     </section>
     <!-- Footer Section Ends Here -->
