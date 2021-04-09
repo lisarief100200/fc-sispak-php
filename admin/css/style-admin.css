@@ -1,0 +1,133 @@
+/* CSS for All */
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Trebuchet MS;
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+nav{
+    font-size: 20px;
+}
+
+.navbar .container .navbar-nav .nav-link{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* CSS for main content */
+.main-content{
+    padding: 3% 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* CSS for Social */
+.social{
+    background-color: black;
+}
+
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/* CSS for footer */
+.footer{
+    background-color: black;
+    color: orangered;
+}
+
+/* CSS for table */
+.tbl-full{
+    width: 100%;
+}
+
+.tbl-30{
+    width: 30%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+/* CSS for button */
+.button-add{
+    background-color: orangered;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-update{
+    background-color: yellowgreen;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.3em;
+}
+
+.button-delete{
+    background-color: red;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.3em;
+}
+
+#btn{
+    font-size: 20px;
+}
+
+/* CSS for form */
+.form-group{
+    margin: 1%;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+
+/* CSS for login */
+.login{
+    width: 30%;
+    border: 1px solid grey;
+    margin: 5% auto;
+    padding: 2%;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

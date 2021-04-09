@@ -1,0 +1,90 @@
+/* CSS for All */
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: verdana;
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+nav{
+    font-size: 20px;
+}
+
+.navbar .container .navbar-nav .nav-link{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* CSS for main content */
+.main-content{
+    padding: 3% 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* CSS for Social */
+.social{
+    background-color: black;
+}
+
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/* CSS for footer */
+.footer{
+    background-color: black;
+    color: orangered;
+}
+
+m{
+    margin: 1%;
+}
+
+/* CSS for button */
+.button-add{
+    background-color: orangered;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-add:hover{
+    background-color: rgb(236, 134, 0);
+    text-decoration: none;
+}
+
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+
+/* CSS for table */
+.tbl-full{
+    width: 100%;
+}
+
+.tbl-30{
+    width: 30%;
+}
